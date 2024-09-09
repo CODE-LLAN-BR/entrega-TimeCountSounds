@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    </script>
+    <title>TimeCount&Sounds</title>
+  </head>
+  <body>
+    <div id="app">
+      <main>
+        <div class="app-interface">
+          <div class="clock-container">
+            <section id="timer" class="flex">
+              <span id="minutes">00</span>
+
+              <span>:</span>
+
+              <span id="seconds">00</span>
+            </section>
+
+            <section class="timer-control" id="control">
+              
+              <button 
+              data-action="toggleRunning"
+              class="ph ph-pause-circle "id='secondary'>
+                <span class="sr-only">Pausar</span>
+              </button>
+
+              <button 
+              data-action="toggleRunning"
+              class="ph ph-play-circle ">
+                <span class="sr-only">Iniciar</span>
+              </button>
+
+              <button
+              data-action="reset" 
+              class="ph ph-stop-circle ">
+                <span class="sr-only">Parar</span>
+              </button>
+
+              <button 
+              data-action="addFive"
+              class="ph ph-plus-circle">
+                <span class="sr-only">Adicionar 5 minutos</span>
+              </button>
+
+              <button
+              data-action="subFive" 
+              class="ph ph-minus-circle">
+                <span class="sr-only">Retirar 5 minutos</span>
+              </button>
+            </section>
+          </div>
+
+          <section id="sound-explorer">
+            <button class="card-wrapper"
+            id="forest"
+              data-action="forestFun">
+              <i class="ph ph-tree"
+              data-action="forestFun"></i>
+              <span class="sr-only">Floresta</span>
+            </button>
+
+            <button class="card-wrapper " 
+            id="rain"
+            data-action="rainFun">
+              <i class="ph ph-cloud-rain"
+              data-action="rainFun"></i>
+              <span class="sr-only">Chuva</span>
+            </button>
+
+            <button class="card-wrapper"
+            id="subway"
+            data-action="subwayFun">
+              <i class="ph ph-subway"
+              data-action="subwayFun"></i>
+              <span class="sr-only">Cafeteria</span>
+            </button>
+
+            <button class="card-wrapper"
+            id="fire"
+            data-action="fireFun">
+              <i class="ph ph-campfire"
+              data-action="fireFun"></i>
+              <span class="sr-only">Lareira</span>
+            </button>
+          </section>
+        </div>
+      </main>
+      <!-- <footer>llan-br</footer> -->
+    </div>
+    <script src="./js/main.js" type="module" defer></script>
+  </body>
+</html>
