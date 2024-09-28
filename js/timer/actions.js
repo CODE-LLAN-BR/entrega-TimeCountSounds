@@ -14,7 +14,7 @@ export function toggleRunning(){
     if(el.html.classList == 'running'){
         state.running = true
         sound.toggleClick.play()
-        
+
     }else{
         state.running = false
         sound.toggleClick.play()
@@ -25,11 +25,14 @@ export function toggleRunning(){
 }
 
 export function reset() {
+     
+
      state.running = false
      el.html.classList.remove('running')
      timer.updateDisplay()
-
      sound.resetClick.play()
+
+     
 
 }
 
