@@ -3,6 +3,7 @@ import * as el from "./elements.js"
 import * as act from "./actions.js"
 import { blast } from "./sound.js"
 
+//countdown logic
 export function countdown(){
     
     document.querySelector('body').classList.remove('bg-red')
@@ -37,6 +38,8 @@ export function countdown(){
     state.countdownId = setTimeout(() => countdown(),1000)
 
 }
+
+//application time link
 export function updateDisplay(minutes, seconds){
     minutes = minutes ?? state.minutes
     seconds = seconds ?? state.seconds

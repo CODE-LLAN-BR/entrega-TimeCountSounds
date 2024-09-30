@@ -5,6 +5,8 @@ import * as sound from './sound.js'
 
 let min = 0
 
+//application actions
+
 export function toggleRunning(){
     
 

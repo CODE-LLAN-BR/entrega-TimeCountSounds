@@ -1,3 +1,5 @@
+/* 
+reset css */
 *{
     
     box-sizing: border-box;
@@ -5,21 +7,30 @@
     padding:0;
 }
 
+/* 
+body pattern */
 body{
     font-size: 1.6rem;
 
     font-family: 'Roboto',system-ui;
 
-    background-color: white;
+    background-color: var(--bg-color-standard)
     
 }
 
 
-
+/* 
+root and variables */
 :root{
     font-size: 62.5%;
+    --bg-color-secondary:hsl(0, 100%, 50%);
+    --bg-color-standard:hsl(0, 0%, 100%);
+    --ff-color-standard:hsl(0, 0%, 20%);
+    
 }
 
+/* 
+ container application*/
 #app{
     height: 100vh;
    
@@ -29,6 +40,8 @@ body{
     align-items: center;
 }
 
+/* 
+Style of application */
 main{
     
     padding: 3rem;
@@ -45,7 +58,7 @@ main{
     font-size: 12rem;
     font-weight: 500;
     margin-bottom: 1.7rem;
-    color: hsl(0, 0%, 20%);
+    color: var(--ff-color-standard);
     
 
 }
@@ -62,9 +75,8 @@ main{
     border-radius: 999px;
     font-size:4.8rem;
     padding: 0;
-    color: hsl(0, 0%, 20%);
+    color: var(--ff-color-standard);
 }
-
 
 #sound-explorer{
     display: grid;
@@ -80,8 +92,8 @@ main{
     border: none;
     border-radius: 2.4rem;
     ;
-    background-color: red;
-    color: white;
+    background-color: var(--bg-color-secondary);
+    color: var(--bg-color-standard);
     
     display: flex;
     align-items: center;
@@ -90,13 +102,16 @@ main{
     font-size: 5.6rem;
     
 }
+
+/* 
+effects and events */
 .vibrate{
     animation: vibrate 0.3s linear infinite both;
 
-    background-color: white;
+    background-color: var(--bg-color-standard);
 
 
-    color: red;
+    color: var(--bg-color-secondary);
 }
 
   @keyframes vibrate {
@@ -130,8 +145,6 @@ button:hover{
     cursor: pointer;
 }
 
-
-
 .sr-only{
     width: 1px;
     height: 1px;
@@ -146,16 +159,15 @@ button:hover{
     appearance: none;
 }
 
-
-
 .running .ph-play-circle,
 html:not(.running) .ph-pause-circle{
 
     display: none;
 
 }
+
 #secondary{
-    color: red;
+    color: var(--bg-color-secondary);
     animation: vibrate 0.3s linear infinite both;
     
         
@@ -165,7 +177,8 @@ html:not(.running) .ph-pause-circle{
     
 }
 
-
+/* 
+application responsiveness */
 @media (max-width: 836px) {
     
     .app-interface{
@@ -190,19 +203,19 @@ html:not(.running) .ph-pause-circle{
 }
 
 .bg-red{
-    background-color: red;
+    background-color: var(--bg-color-secondary);
     .flex{
-        color:black;
+        color:var(--ff-color-standard);
     }
     .timer-control button {
-        color: black;
+        color: var(--ff-color-standard);
     }
     .card-wrapper{
-        border:.4rem solid black;
-        color: black;
+        border:.4rem solid var(--ff-color-standard);
+        color: var(--ff-color-standard);
     }
     .vibrate{
-        color: white;
-        background-color: red;
+        color: var(--bg-color-standard);
+        background-color: var(--bg-color-secondary);
     }
 }

@@ -1,6 +1,7 @@
 import * as el from "./elements.js"
 import * as actions from './actions.js'
 
+//click events
 
 
 export function timerCommands(){

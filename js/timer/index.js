@@ -3,7 +3,7 @@ import * as event from "./event.js"
 import * as timer from "./logicTimer.js"
 
 
-
+//start application
 
 export function start(minutes,seconds){
     
